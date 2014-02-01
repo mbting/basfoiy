@@ -9,9 +9,9 @@ Class Basfoiy
 {
 
 	private $config;
-
 	private $urlParam;
 	private $db;
+	private $view;
 
 	/*
 	 * initialize  basfoiy	
@@ -21,10 +21,9 @@ Class Basfoiy
 		$this->config = $config;
 		// set database
 		$this->db = new Db($this->config['db']);
-		// set token
-		header('X-Bas-Token: THETOKEN');
 		// set url params
 		$this->urlParam = $this->parseUrl();
+		$this->view = new ViewHelper($config['theme']);
 	}
 
 	/*
@@ -32,7 +31,7 @@ Class Basfoiy
 	 */
 	public function homeAction()
 	{
-		echo 'home';
+		$this->view->setLocation('index')->load();
 	}
 
 	/*
@@ -135,3 +134,6 @@ Class Basfoiy
 }
 
 require_once 'Db.php';
+require_once 'ViewHelper.php';
+
+error_reporting(0);
