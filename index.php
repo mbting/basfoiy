@@ -2,7 +2,7 @@
 
 require_once 'Basfoiy/Basfoiy.php';
 
-$basfoiy = new Basfoiy(array());
+$basfoiy = new Basfoiy(require_once 'Basfoiy/config.php');
 
 switch($basfoiy->urlParam(1))
 {

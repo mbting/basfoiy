@@ -3,18 +3,21 @@
 /**
  * Basfoiy App
  *
-**/
+ */
 
 Class Basfoiy
 {
 
 	private $urlParam;
+	private $db;
 
 	/*
 	 * initialize  basfoiy	
 	 */
 	public function __construct(Array $config)
 	{
+		// set database
+		$this->db = new Db($config['db']);
 		// set token
 		header('X-Bas-Token: THETOKEN');
 		// set url params
@@ -74,3 +77,5 @@ Class Basfoiy
 	}
 
 }
+
+require_once 'Db.php';
