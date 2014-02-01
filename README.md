@@ -1,0 +1,4 @@
+basfoiy
+=======
+
+dhivehi english dictionary
