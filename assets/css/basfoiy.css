@@ -1,0 +1,306 @@
+/**
+ *
+ * @author Ibrahim Naeem <mbting.9m@gmail.com>
+ *
+**/
+
+::-webkit-scrollbar {display: none;}
+*{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+input:focus {outline: none; }
+
+body {
+	margin: 0;
+	padding: 0;
+	padding-top: 3%;
+	font: 15px Tahoma, Helvetica, Arial, sans-serif;
+	background : url(../img/pat.png);
+}
+
+.hide {
+	display : none;
+}
+
+.dv, .thaanaKeyboardInput {
+	font-family: Mv Iyyu Formal;
+	direction: rtl;
+	font-size: 1.3em;
+	line-height: 1.1;
+}
+
+input.dv {
+	line-height: 2.8;
+}
+
+.baserror {
+	background: #9e3e3e;
+	padding: 10px;
+	color: #fff;
+	text-align: center;
+}
+
+.baserror .dv {
+	font-size: 1.2em;
+}
+
+.clear:before,
+.clear:after {
+	content: " ";
+	display: table;
+}
+
+.clear:after {
+	clear: both;
+}
+
+#baslogo {
+	width: 240px;
+	height: 240px;
+	display: block;
+	margin: 0 auto;
+	text-indent: -9999px;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+.baslogosmall {
+	height: 100px !important;
+	width: 100px !important;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
+#bascontent {
+	width: 620px;
+	margin: 0 auto;
+	border: 3px solid #6b9e3e;
+	margin-top: 3%;
+	margin-bottom: 5%;
+}
+
+.bascontentsmall {
+	margin-top: 2% !important;
+}
+
+#basform {
+	width: 100%;
+}
+
+#basform * {
+	height: 60px;
+	color: #7e7e7e;
+}
+
+#baslang {
+	float: left;
+	background: #6b9e3e;
+	width: 60px;
+	padding: 20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+#basterm {
+	width: 100%;
+	padding: 10px;
+	font-size: 1.3em;
+	border: 1px solid #fff;
+}
+
+#bastext {
+	margin-left: 60px;
+}
+
+#basresults {
+	width: 620px;
+	margin: 0 auto;
+	margin-top: -4%;
+	margin-bottom: 2%;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+#basquote {
+	width: 620px;
+	margin: 0 auto;
+	text-align: center;
+	color: #7e7e7e;
+	font-size: 1.5em;
+	min-height: 42px;
+	background: url('../img/quote.png') no-repeat center;
+	padding : 20px;
+}
+
+
+
+@media only screen and (min-width:0px) and (max-width:650px) {
+
+	#baslogo {
+		height: 150px;
+		width: 150px;
+		margin-top: 5%;
+		margin-bottom: 8%;
+	}
+
+	#bascontent {
+		width: 96%;
+	}
+
+}
+
+
+@font-face {
+	font-family: Mv Iyyu Formal;
+	src: url('../fonts/Mv_Iyyu_Formal.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/** modified loading animation http://cssload.net/#sthash.XUYgXLkl.dpuf **/
+
+#followingBallsG{
+	position:relative;
+	width:620px;
+	height:5px;
+	/*display: none;*/
+}
+.followingBallsG{
+	background-color:#6b9e3e;
+	position:absolute;
+	top:0;
+	left:0;
+	width:5px;
+	height:5px;
+	-moz-border-radius:24px;
+	-moz-animation-name:bounce_followingBallsG;
+	-moz-animation-duration:2.8s;
+	-moz-animation-iteration-count:infinite;
+	-moz-animation-direction:linear;
+	-webkit-border-radius:24px;
+	-webkit-animation-name:bounce_followingBallsG;
+	-webkit-animation-duration:2.8s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:linear;
+	-ms-border-radius:24px;
+	-ms-animation-name:bounce_followingBallsG;
+	-ms-animation-duration:2.8s;
+	-ms-animation-iteration-count:infinite;
+	-ms-animation-direction:linear;
+	-o-border-radius:24px;
+	-o-animation-name:bounce_followingBallsG;
+	-o-animation-duration:2.8s;
+	-o-animation-iteration-count:infinite;
+	-o-animation-direction:linear;
+	border-radius:24px;
+	animation-name:bounce_followingBallsG;
+	animation-duration:2.8s;
+	animation-iteration-count:infinite;
+	animation-direction:linear;
+}
+#followingBallsG_1{
+	-moz-animation-delay:0s;
+}
+#followingBallsG_1{
+	-webkit-animation-delay:0s;
+}
+#followingBallsG_1{
+	-ms-animation-delay:0s;
+}
+#followingBallsG_1{
+	-o-animation-delay:0s;
+}
+#followingBallsG_1{
+	animation-delay:0s;
+}
+#followingBallsG_2{
+	-moz-animation-delay:0.28s;
+	-webkit-animation-delay:0.28s;
+	-ms-animation-delay:0.28s;
+	-o-animation-delay:0.28s;
+	animation-delay:0.28s;
+}
+#followingBallsG_3{
+	-moz-animation-delay:0.56s;
+	-webkit-animation-delay:0.56s;
+	-ms-animation-delay:0.56s;
+	-o-animation-delay:0.56s;
+	animation-delay:0.56s;
+}
+#followingBallsG_4{
+	-moz-animation-delay:0.84s;
+	-webkit-animation-delay:0.84s;
+	-ms-animation-delay:0.84s;
+	-o-animation-delay:0.84s;
+	animation-delay:0.84s;
+}
+@-moz-keyframes bounce_followingBallsG{
+	0%{
+		left:0px;
+		background-color:#6b9e3e;
+	}
+	50%{
+		left:615px;
+		background-color:#6b9e3e;
+	}
+	100%{
+		left:0px;
+		background-color:#6b9e3e;
+	}
+}
+@-webkit-keyframes bounce_followingBallsG{
+	0%{
+		left:0px;
+		background-color:#6b9e3e;
+	}
+	50%{
+		left:615px;
+		background-color:#6b9e3e;
+	}
+	100%{
+		left:0px;
+		background-color:#6b9e3e;
+	}
+}
+@-ms-keyframes bounce_followingBallsG{
+	0%{
+		left:0px;
+		background-color:#6b9e3e;
+	}
+	50%{
+		left:615px;
+		background-color:#6b9e3e;
+	}
+	100%{
+		left:0px;
+		background-color:#6b9e3e;
+	}
+}
+@-o-keyframes bounce_followingBallsG{
+	0%{
+		left:0px;
+		background-color:#6b9e3e;
+	}
+	50%{
+		left:615px;
+		background-color:#6b9e3e;
+	}
+	100%{
+		left:0px;
+		background-color:#6b9e3e;
+	}
+}
+@keyframes bounce_followingBallsG{
+	0%{
+		left:0px;
+		background-color:#6b9e3e;
+	}
+	50%{
+		left:615px;
+		background-color:#6b9e3e;
+	}
+	100%{
+		left:0px;
+		background-color:#6b9e3e;
+	}
+}
