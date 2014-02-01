@@ -1,0 +1,19 @@
+/* TEAM */
+	Developer: Ibrahim Naeem
+	From: Thulhaadhoo, Ba Atoll, Maldives
+
+	System Architecht: Abdulla Shaheed
+	From: Male', Maldives
+
+	Word Analyst: Rifga Riza
+	From: Addu City, Maldives
+
+/* SOURCE */
+	Name: English - Dhivehi Dictionary (A gude to the language of Maldives)
+	By: F. Abdulla and M. O'Shea
+
+/* SITE */
+    Last update: 2014/01/19
+    Language: Dhivehi/English
+    Doctype: HTML5
+    IDE: Sublime Text, Photoshop
