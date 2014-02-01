@@ -5,6 +5,8 @@ dhivehi english dictionary
 
 
 config file :
+
+```php
 	return array(
 			'token' => 'thetoken',
 			'theme' => 'default',
