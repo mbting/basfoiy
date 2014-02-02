@@ -197,6 +197,37 @@ input.dv {
 	padding : 20px;
 }
 
+#basdev {
+	width : 100%;
+	text-align: center;
+}
+
+#basdev a {
+	display: inline-block;
+	/*background: #000;*/
+	margin: 5px;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+}
+
+#inm {
+	background: url('../img/inm.png') 0px -30px;
+}
+
+#inm:hover {
+	background: url('../img/inm.png') 0px 0px;
+}
+
+
+#exz {
+	background: url('../img/exz.png') 0px -30px;
+}
+
+#exz:hover {
+	background: url('../img/exz.png') 0px 0px;
+}
+
 
 
 @media only screen and (min-width:0px) and (max-width:650px) {
