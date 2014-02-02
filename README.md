@@ -9,7 +9,6 @@ config file :
 ```php
 	return array(
 			'token' => 'thetoken',
-			'theme' => 'default',
 			'limit' => '5',
 			'findSimilar' => true,
 			'db' => array(

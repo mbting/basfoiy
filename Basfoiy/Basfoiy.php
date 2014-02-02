@@ -23,7 +23,7 @@ Class Basfoiy
 		$this->db = new Db($this->config['db']);
 		// set url params
 		$this->urlParam = $this->parseUrl();
-		$this->view = new ViewHelper($config['theme']);
+		$this->view = new ViewHelper();
 	}
 
 	/*
