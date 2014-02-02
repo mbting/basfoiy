@@ -121,6 +121,71 @@ input.dv {
 	transition: all 0.8s;
 }
 
+#basresults ul {
+	padding : 0;
+}
+
+.baseng {
+	float: left;
+}
+
+.basdv {
+	float: right;
+	text-align: right;
+}
+
+.basword {
+	list-style: none;
+	background : #fff;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	border: 1px solid #d6d6d6;
+}
+
+.basbox {
+	width : 50%;
+	padding: 10px 10px 0px 10px;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+.basbox a {
+	text-decoration: none;
+	color: #7e7e7e;
+	font-size: 1.3em;
+	padding: 5px;
+}
+
+.basbox a.dv {
+	font-size: 1.7em;
+	line-height: 1.3;
+	float: right;
+}
+
+.bascontext {
+	font-size: 0.5em;
+	color: #d6d6d6;
+	font-style: italic;
+}
+
+.bascontext.dv {
+	font-size: 0.9em;
+	line-height: 1.1;
+}
+
+.basmeaning {
+	color: #7e7e7e;
+	margin: 0px;
+	padding-top: 10px;
+	/*display: none;*/
+}
+
+.bastype {
+	color: #d6d6d6;
+	margin-right: 5px;
+}
+
 #basquote {
 	width: 620px;
 	margin: 0 auto;
@@ -153,6 +218,16 @@ input.dv {
 
 	#basresults {
 		width: 96%;
+	}
+
+	.basbox a {
+		display: block;
+		clear: both;
+	}
+
+	.bascontext {
+		display: block;
+		clear: both;
 	}
 
 }

@@ -60,22 +60,29 @@ $("#basform").submit(function(){
 
 // ajax call
 function callWords() {
-	console.log("calling words");
 	$("#followingBallsG").show();
 	$("#basresults ul").html('');
 	var basdata = {"token":$("#basterm").data("token")};
 	api = $.post("search/" + $("#basterm").val(),basdata,function(data){
-		$.each(data,function(key,row){
-			console.log(row);
-		});
-		$("#followingBallsG").hide();
+		if (data.error === false){
+			$.each(data.result,function(key,row){
+				$("#basresults ul")
+					.hide()
+					.append('<li data-id="'+row.id+'" class="basword clear"><div class="basbox baseng"><a href="#">'+row.eng+'</a></div><div class="basbox basdv"><a href="#" class="dv">'+row.dhi+' <span class="bascontext">&#151; '+row.latin+'</span></a></div></li>')
+					.fadeIn("slow",function(){});
+			});
+		} else {
+			$("#basresults ul")
+				.hide()
+				.html('<li class="basword clear"><div class="basbox baseng"><a href="#">Not found</a></div><div class="basbox basdv"><a href="#" class="dv">ނުފެނުނު</a></div></li>')
+				.fadeIn("slow",function(){});
+		}
 	}).error(function(){
-		console.log("Error");
 		if ($("#basterm").val() !== '') {
 			$("#basresults .baserror").fadeIn();
 		}
-		$("#followingBallsG").hide();
 	});
+	$("#followingBallsG").hide();
 }
 
 // delay actions

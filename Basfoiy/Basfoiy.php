@@ -42,18 +42,21 @@ Class Basfoiy
 		// respond as json
 		header('Content-Type: application/json');
 
+		//output array
+		$output = array('error' => true,'result' => '');
+
 		// ignore all requests except needed ones 
 		$keyword = $this->urlParam(2);
 		// if ($_SERVER['REQUEST_METHOD'] !== 'POST' || $keyword === false || $keyword == ''){
 		if ($keyword === false || $keyword == '')
 		{
-			exit(json_encode(array('error' => true)));
+			exit(json_encode($output));
 		}
 
 		// query the keyowrd
 		$result = $this->db->query(
 				'select * from basdata WHERE eng like :word or dhi like :word or latin like :word order by eng limit 5',
-				array('word' => '%' . $keyword . '%')
+				array('word' => $keyword . '%')
 			);
 
 		// if no results are found
@@ -87,18 +90,16 @@ Class Basfoiy
 		// query one more time
 		$result = $this->db->query(
 				'select * from basdata WHERE eng like :word or dhi like :word or latin like :word order by eng limit 5',
-				array('word' => '%' . $keyword . '%')
+				array('word' => $keyword . '%')
 			);
 
 		// give up!
 		if ($result !== false)
 		{
-			echo json_encode($result);
+			$output['error'] = false;
+			$output['result'] = $result;
 		} 
-		else
-		{
-			echo json_encode(array('error' => true));
-		}
+		echo json_encode($output);
 
 	}
 
