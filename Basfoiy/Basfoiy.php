@@ -13,6 +13,8 @@ Class Basfoiy
 	private $db;
 	private $view;
 
+	private $tokenKey;
+
 	/*
 	 * initialize  basfoiy	
 	 */
@@ -23,7 +25,16 @@ Class Basfoiy
 		$this->db = new Db($this->config['db']);
 		// set url params
 		$this->urlParam = $this->parseUrl();
+		// set view helper
 		$this->view = new ViewHelper();
+		// set csrf token key
+		$this->tokenKey = md5($config["token"]);
+
+		session_start();
+
+		// if ($_SESSION[$this->tokenKey] === null) {
+		// 	$_SESSION[$this->tokenKey] = base64_encode(openssl_random_pseudo_bytes(16));
+		// }
 	}
 
 	/*
@@ -31,8 +42,10 @@ Class Basfoiy
 	 */
 	public function homeAction()
 	{
+		// set a new hash on every page reload
+		$_SESSION[$this->tokenKey] = base64_encode(openssl_random_pseudo_bytes(16));
 		$text = $result = $this->db->query('select bas from footertexts order by rand() limit 1');
-		$this->view->setLocation('index')->load(array('text' => $text[0]->bas));
+		$this->view->setLocation('index')->load(array('token' => $_SESSION[$this->tokenKey],'text' => $text[0]->bas));
 	}
 
 	/*
@@ -47,9 +60,9 @@ Class Basfoiy
 		$output = array('error' => true,'result' => '');
 
 		// ignore all requests except needed ones 
-		$keyword = $this->urlParam(2);
-		// if ($_SERVER['REQUEST_METHOD'] !== 'POST' || $keyword === false || $keyword == ''){
-		if ($keyword === false || $keyword == '')
+		$keyword = isset($_POST['basterm']) ? $_POST['basterm'] : false;
+		if ($this->checkToken() === false || $_SERVER['REQUEST_METHOD'] !== 'POST' || $keyword === false || $keyword == '')
+		// if ($keyword === false || $keyword == '')
 		{
 			exit(json_encode($output));
 		}
@@ -112,6 +125,18 @@ Class Basfoiy
 		$index = $index - 1;
 		return isset($this->urlParam[$index]) ? $this->urlParam[$index] : false;
 	}
+
+	/*
+	 * check csrf token
+	 */
+	public function checkToken()
+	{
+		if ($_SESSION[$this->tokenKey] == $_SERVER['BasToken']) 
+			return true;
+		return false;
+	}
+
+
 
 	/*
 	 * parse the current url

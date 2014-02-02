@@ -1,7 +1,7 @@
 <div id="bascontent" class="clear">
     <form action="search" id="basform">
         <a href="#" id="baslang">EN</a>
-        <div id="bastext"><input type="text" name="basterm" id="basterm" data-token="token" placeholder="Enter a word" /></div>
+        <div id="bastext"><input type="text" name="basterm" id="basterm" data-token="<?php echo $token; ?>" placeholder="Enter a word" /></div>
     </form>
 </div>
 <div id="basresults">

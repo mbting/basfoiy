@@ -15,6 +15,10 @@ $(document).ready(function(){
 
 });
 
+$.ajaxSetup({
+    headers: { 'BasToken': $("#basterm").data("token")}
+});
+
 $("#baslang").click(
 	function() {
 		var lang = $(this).text();
@@ -62,8 +66,8 @@ $("#basform").submit(function(){
 function callWords() {
 	$("#followingBallsG").show();
 	$("#basresults ul").html('');
-	var basdata = {"token":$("#basterm").data("token")};
-	api = $.post("search/" + $("#basterm").val(),basdata,function(data){
+	var basdata = {"basterm":$("#basterm").val()};
+	api = $.post("search",basdata,function(data){
 		if (data.error === false){
 			$.each(data.result,function(key,row){
 				$("#basresults ul")
