@@ -81,12 +81,13 @@ function callWords() {
 				.html('<li class="basword clear"><div class="basbox baseng"><a href="#">Not found</a></div><div class="basbox basdv"><a href="#" class="dv">ނުފެނުނު</a></div></li>')
 				.fadeIn("slow",function(){});
 		}
+		$("#followingBallsG").hide();
 	}).error(function(){
 		if ($("#basterm").val() !== '') {
 			$("#basresults .baserror").fadeIn();
 		}
+		$("#followingBallsG").hide();
 	});
-	$("#followingBallsG").hide();
 }
 
 // delay actions
