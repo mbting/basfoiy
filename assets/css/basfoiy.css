@@ -143,7 +143,15 @@ input.dv {
 		margin-bottom: 8%;
 	}
 
+	#basquote {
+		width: 100%;
+	}
+
 	#bascontent {
+		width: 96%;
+	}
+
+	#basresults {
 		width: 96%;
 	}
 
@@ -161,7 +169,7 @@ input.dv {
 
 #followingBallsG{
 	position:relative;
-	width:620px;
+	width:100%;
 	height:5px;
 	/*display: none;*/
 }
@@ -214,25 +222,25 @@ input.dv {
 	animation-delay:0s;
 }
 #followingBallsG_2{
-	-moz-animation-delay:0.28s;
-	-webkit-animation-delay:0.28s;
-	-ms-animation-delay:0.28s;
-	-o-animation-delay:0.28s;
-	animation-delay:0.28s;
+	-moz-animation-delay:0.08s;
+	-webkit-animation-delay:0.08s;
+	-ms-animation-delay:0.08s;
+	-o-animation-delay:0.08s;
+	animation-delay:0.08s;
 }
 #followingBallsG_3{
-	-moz-animation-delay:0.56s;
-	-webkit-animation-delay:0.56s;
-	-ms-animation-delay:0.56s;
-	-o-animation-delay:0.56s;
-	animation-delay:0.56s;
+	-moz-animation-delay:0.36s;
+	-webkit-animation-delay:0.36s;
+	-ms-animation-delay:0.36s;
+	-o-animation-delay:0.36s;
+	animation-delay:0.36s;
 }
 #followingBallsG_4{
-	-moz-animation-delay:0.84s;
-	-webkit-animation-delay:0.84s;
-	-ms-animation-delay:0.84s;
-	-o-animation-delay:0.84s;
-	animation-delay:0.84s;
+	-moz-animation-delay:0.64s;
+	-webkit-animation-delay:0.64s;
+	-ms-animation-delay:0.64s;
+	-o-animation-delay:0.64s;
+	animation-delay:0.64s;
 }
 @-moz-keyframes bounce_followingBallsG{
 	0%{
@@ -240,7 +248,7 @@ input.dv {
 		background-color:#6b9e3e;
 	}
 	50%{
-		left:615px;
+		left:99%;
 		background-color:#6b9e3e;
 	}
 	100%{
@@ -254,7 +262,7 @@ input.dv {
 		background-color:#6b9e3e;
 	}
 	50%{
-		left:615px;
+		left:99%;
 		background-color:#6b9e3e;
 	}
 	100%{
@@ -268,7 +276,7 @@ input.dv {
 		background-color:#6b9e3e;
 	}
 	50%{
-		left:615px;
+		left:99%;
 		background-color:#6b9e3e;
 	}
 	100%{
@@ -282,7 +290,7 @@ input.dv {
 		background-color:#6b9e3e;
 	}
 	50%{
-		left:615px;
+		left:99%;
 		background-color:#6b9e3e;
 	}
 	100%{
@@ -296,7 +304,7 @@ input.dv {
 		background-color:#6b9e3e;
 	}
 	50%{
-		left:615px;
+		left:99%;
 		background-color:#6b9e3e;
 	}
 	100%{
