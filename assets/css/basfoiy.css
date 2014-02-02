@@ -195,6 +195,7 @@ input.dv {
 	min-height: 42px;
 	background: url('../img/quote.png') no-repeat center;
 	padding : 20px;
+	line-height: 1.5em;
 }
 
 #basdev {

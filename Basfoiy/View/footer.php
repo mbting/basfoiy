@@ -1,4 +1,4 @@
-        <p id="basquote" class="dv">ވެހޭތާ ފެންނަގާށެވެ</p>
+        <p id="basquote" class="dv"><?php echo $text; ?></p>
         <p id="basdev">
         	<a id="inm" href="http://naeem.mv">Ibrahim Naeem</a>
         	<a id="exz" href="http://fb.me/evenxzero">Abdulla Shaheed</a>

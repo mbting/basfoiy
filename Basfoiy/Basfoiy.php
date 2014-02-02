@@ -31,7 +31,8 @@ Class Basfoiy
 	 */
 	public function homeAction()
 	{
-		$this->view->setLocation('index')->load();
+		$text = $result = $this->db->query('select bas from footertexts order by rand() limit 1');
+		$this->view->setLocation('index')->load(array('text' => $text[0]->bas));
 	}
 
 	/*
