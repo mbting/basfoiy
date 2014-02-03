@@ -1,5 +1,6 @@
 /* TEAM */
 	Developer: Ibrahim Naeem
+	Contact: mbting.9m[at]gmail.com
 	From: Thulhaadhoo, Ba Atoll, Maldives
 
 	System Architecht: Abdulla Shaheed
