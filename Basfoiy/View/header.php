@@ -7,7 +7,7 @@
         <title>Basfoiy</title>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="assets/css/basfoiy.css">
-        <link rel="author" href="/humans.txt">
+        <link rel="author" href="humans.txt">
         <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     </head>
     <body>
