@@ -11,4 +11,6 @@
         <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     </head>
     <body>
-        <img id="baslogo" src="assets/img/baslogo.png" alt="Basfoiy" class="" />
+        <header>
+            <img id="baslogo" src="assets/img/baslogo.png" alt="Basfoiy" class="" />
+        </header>

@@ -14,7 +14,7 @@
 	By: F. Abdulla and M. O'Shea
 
 /* SITE */
-    Last update: 2014/01/19
+    Last update: 2014/02/03
     Language: Dhivehi/English
     Doctype: HTML5
     IDE: Sublime Text, Photoshop
