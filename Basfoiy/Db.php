@@ -11,8 +11,8 @@ Class Db
 	{
 		try 
 		{
-			$this->con = new PDO('mysql:host=' . $dbConfig['host'] . ';dbname=' . $dbConfig['db'] . ';charset=utf8', $dbConfig['user'], $dbConfig['pass']);
-			$this->con->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES utf8');
+			$this->con = new PDO('mysql:host=' . $dbConfig['host'] . ';dbname=' . $dbConfig['db'] . ';charset=utf8', $dbConfig['user'], $dbConfig['pass'],array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
+			//$this->con->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES utf8');
 		} 
 		catch (PDOException $e)
 		{
