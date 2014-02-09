@@ -233,6 +233,11 @@ header,footer {
 	background: url('../img/exz.png') 0px 0px;
 }
 
+#copy {
+	font-size: 0.8em;
+	color: #7e7e7e;
+}
+
 
 
 @media only screen and (min-width:0px) and (max-width:650px) {
