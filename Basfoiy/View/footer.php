@@ -1,11 +1,20 @@
         <footer>
 	        <p id="basquote" class="dv"><?php echo $text; ?></p>
+            <div class="fb-like" data-href="https://www.facebook.com/basfoiymv" data-layout="button_count" data-action="recommend" data-show-faces="true" data-share="false"></div>
 	        <p id="basdev">
-	        	<a id="inm" href="http://naeem.mv" target="_blank">Ibrahim Naeem</a>
-	        	<a id="exz" href="http://fb.me/evenxzero" target="_blank">Abdulla Shaheed</a>
+	        	<a id="inm" href="http://www.google.com/+IbrahimNaeem" target="_blank">Ibrahim Naeem</a>
+	        	<a id="exz" href="https://plus.google.com/+AbdhullaShaheed/" target="_blank">Abdulla Shaheed</a>
 	        <p>
             <p id="copy">&copy <?php echo date('Y'); ?> Basfoiy.mv</p>
         </footer>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=279775938717481";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script src="assets/js/jtk-4.2.1.pack.js"></script>
         <script src="assets/js/basfoiy.js"></script>

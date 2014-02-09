@@ -216,6 +216,10 @@ header,footer {
 	height: 30px;
 }
 
+.fb-like {
+	padding: 10px;
+}
+
 #inm {
 	background: url('../img/inm.png') 0px -30px;
 }
