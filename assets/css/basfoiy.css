@@ -52,6 +52,12 @@ input.dv {
 	clear: both;
 }
 
+header,footer {
+	width: 620px;
+	margin: 0 auto;
+	text-align: center;
+}
+
 #baslogo {
 	width: 240px;
 	height: 240px;
@@ -165,7 +171,7 @@ input.dv {
 
 .bascontext {
 	font-size: 0.5em;
-	color: #d6d6d6;
+	color: #a6a6a6;
 	font-style: italic;
 }
 
@@ -189,7 +195,6 @@ input.dv {
 #basquote {
 	width: 620px;
 	margin: 0 auto;
-	text-align: center;
 	color: #7e7e7e;
 	font-size: 1.5em;
 	min-height: 42px;
@@ -200,7 +205,6 @@ input.dv {
 
 #basdev {
 	width : 100%;
-	text-align: center;
 }
 
 #basdev a {
@@ -229,6 +233,11 @@ input.dv {
 	background: url('../img/exz.png') 0px 0px;
 }
 
+#copy {
+	font-size: 0.8em;
+	color: #7e7e7e;
+}
+
 
 
 @media only screen and (min-width:0px) and (max-width:650px) {
@@ -244,7 +253,7 @@ input.dv {
 		width: 100%;
 	}
 
-	#bascontent {
+	#bascontent,header,footer {
 		width: 96%;
 	}
 
