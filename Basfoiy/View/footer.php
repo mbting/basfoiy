@@ -5,7 +5,7 @@
 	        	<a id="inm" href="http://www.google.com/+IbrahimNaeem" target="_blank">Ibrahim Naeem</a>
 	        	<a id="exz" href="https://plus.google.com/+AbdhullaShaheed/" target="_blank">Abdulla Shaheed</a>
 	        <p>
-            <p id="copy">&copy <?php echo date('Y'); ?> Basfoiy.mv</p>
+            <p id="copy">&copy; <?php echo date('Y'); ?> Basfoiy.mv</p>
         </footer>
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
@@ -29,4 +29,4 @@
 
         </script>
     </body>
-</html/
+</html>
