@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Basfoiy</title>
-        <meta name="description" content="A dhivehi - english dictionary to translate words from one language to other.">
+        <meta name="description" content="Basfoiy is a dhivehi - english dictionary to translate words from one language to other.">
         <meta name="keywords" content="basfoiy,basfoiy mv,dhivehi,english,translate,dhivehi word,english word,radheef,dictionary">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
