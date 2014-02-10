@@ -131,10 +131,6 @@ header,footer {
 	padding : 0;
 }
 
-.baseng {
-	float: left;
-}
-
 .basdv {
 	float: right;
 	text-align: right;
@@ -154,6 +150,11 @@ header,footer {
 	-webkit-transition: all 0.8s;
 	-moz-transition: all 0.8s;
 	transition: all 0.8s;
+}
+
+.baseng {
+	float: left;
+	padding-top: 13px;
 }
 
 .basbox a {
