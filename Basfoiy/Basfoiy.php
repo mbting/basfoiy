@@ -61,7 +61,8 @@ Class Basfoiy
 
 		// ignore all requests except needed ones 
 		$keyword = isset($_POST['basterm']) ? $_POST['basterm'] : false;
-		if ($this->checkToken() === false || $_SERVER['REQUEST_METHOD'] !== 'POST' || $keyword === false || $keyword == '')
+		if ($_SERVER['REQUEST_METHOD'] !== 'POST' || $keyword === false || $keyword == '')
+		// if ($this->checkToken() === false || $_SERVER['REQUEST_METHOD'] !== 'POST' || $keyword === false || $keyword == '')
 		// if ($keyword === false || $keyword == '')
 		{
 			exit(json_encode($output));
