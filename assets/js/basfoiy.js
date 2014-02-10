@@ -11,7 +11,7 @@ $(document).ready(function(){
     $("#followingBallsG").hide();
     $("#basterm").focus();
 	//scroll to searchbox 
-	$('html, body').animate({ scrollTop: $('#basterm').offset().top }, 'slow');
+	//$('html, body').animate({ scrollTop: $('#basterm').offset().top }, 'slow');
 
 });
 
