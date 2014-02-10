@@ -26,7 +26,7 @@ Class Basfoiy
 		// set url params
 		$this->urlParam = $this->parseUrl();
 		// set view helper
-		$this->view = new ViewHelper();
+		$this->view = new ViewHelper($this->config);
 		// set csrf token key
 		$this->tokenKey = md5($config["token"]);
 

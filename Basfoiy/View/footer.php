@@ -12,7 +12,7 @@
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
           js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=421393474630800";
+          js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=<?php echo $this->config["apiKeys"]["fbAppId"]; ?>";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -24,7 +24,7 @@
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-47815107-1', 'basfoiy.mv');
+        ga('create', '<?php echo $this->config["apiKeys"]["analytics"]["account"]; ?>', '<?php echo $this->config["apiKeys"]["analytics"]["domain"]; ?>');
         ga('send', 'pageview');
 
         </script>
