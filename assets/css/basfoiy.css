@@ -153,7 +153,7 @@ header,footer {
 }
 
 .bascontext:after {
-	content:"\200E";
+	content: "\200E";
 }
 
 .baseng {
