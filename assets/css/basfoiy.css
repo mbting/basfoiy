@@ -47,10 +47,6 @@ input.dv {
 	background: #9e3e3e;
 }
 
-input.error {
-	border: 1px solid #9e3e3e !important;
-}
-
 .notice.success {
 	background: #6b9e3e;
 }
@@ -240,10 +236,9 @@ header,footer {
 	position: relative;
 }
 
-#bassuggest form * {
+#bassuggest .notice {
 	width: 100%;
 	margin-bottom: 10px;
-	color: #7e7e7e;
 }
 
 #suggestClose {
@@ -270,13 +265,35 @@ header,footer {
 	color: #d6d6d6 !important;
 }
 
-#bassuggest input {
+#bassuggest input:not(#recaptcha_response_field) {
 	display: block;
 	height: 40px;
 	border: 1px solid #d6d6d6;
 	padding: 10px;
 	font-size: 1.1em;
+	width: 100%;
+	margin-bottom: 10px;
+	color: #7e7e7e;
 }
+
+#recaptcha_table {
+	margin: 0 auto !important;
+}
+
+.recaptcha_input_area input {
+	border: 1px solid #d6d6d6 !important;
+	padding: 2px !important;
+}
+
+#recaptcha_privacy a {
+	color: #d6d6d6;
+	font-size: 0.9em;
+}
+
+#bassuggestrecaptcha {
+	margin-bottom: 10px;
+}
+
 
 #bassuggest button {
 	display: block;
@@ -286,6 +303,8 @@ header,footer {
 	color: #fff;
 	margin-bottom: 0;
 	font-size: 1.1em;
+	width: 100%;
+	margin-bottom: 10px;
 }
 
 #basquote {
@@ -336,6 +355,10 @@ header,footer {
 #copy {
 	font-size: 0.8em;
 	color: #aeaeae;
+}
+
+input.error {
+	border: 1px solid #9e3e3e !important;
 }
 
 

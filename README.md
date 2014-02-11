@@ -23,5 +23,9 @@ config file :
 	                            'account' => 'basfoiy.mv',
 	                            'domain' => 'UA-xxxxxxxx-1'
 	                        ),
+	                    'recaptcha' => array(
+							'public' => 'key',
+							'private' => 'key'
+						),
 	                ),
 	        );

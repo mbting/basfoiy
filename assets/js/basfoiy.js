@@ -91,20 +91,34 @@ function callWords() {
 	});
 }
 
-$("#basresults").on("click",".suggestprompt a",function() { $("#bassuggest").fadeIn(); $("#bassuggest  .notice").fadeOut(); return false;});
+$("#basresults").on("click",".suggestprompt a",function() { 
+	$("#bassuggest").fadeIn(); 
+	$("#bassuggest  .notice").fadeOut();
+	reloadCaptcha();
+	return false;
+});
 
 $("#suggestClose").click(function(){$("#bassuggest").fadeOut(); return false;});
 
 $("#bassuggest form").submit(function() {
 	var ready = false;
-	$("#bassuggest input").each(function() {
+	$("#bassuggest input[type=text]").each(function() {
 		if (ready === false) {
 			ready = $.trim($(this).val()).length > 0;
 		}
 	});
-	if (ready === false) { $("#bassuggest input").addClass("error"); return false; }
+	if (ready === false) { 
+		$("#bassuggest input").addClass("error"); 
+		return false;
+	}
+
+	if ($.trim($("#recaptcha_response_field").val()).length < 1) {
+		$("#recaptcha_response_field").addClass("error"); 
+		return false;
+	}
 
 	var suggestData = $("#bassuggest form").serialize();
+	reloadCaptcha();
 	$.post("suggest",suggestData,function(data){
 		if (data.error === false) {
 			$("#bassuggest  .success").text(data.msg).fadeIn();
@@ -122,6 +136,16 @@ $("#bassuggest input").keydown(function(){
 	$("#bassuggest input").removeClass("error");
 	$("#bassuggest  .notice").fadeOut();
 });
+
+function reloadCaptcha() {
+	Recaptcha.create(recaptchaKey,
+		"bassuggestrecaptcha",
+		{
+			theme: "clean",
+			callback: Recaptcha.focus_response_field
+		}
+	);
+}
 
 // delay actions
 var delay = (function(){

@@ -121,10 +121,14 @@ Class Basfoiy
 	public function suggestAction() {
 		// respond as json
 		header('Content-Type: application/json');
+		$resp = recaptcha_check_answer ($this->config["apiKeys"]["recaptcha"]["private"],
+                                $_SERVER["REMOTE_ADDR"],
+                                $_POST["recaptcha_challenge_field"],
+                                $_POST["recaptcha_response_field"]);
 		// return
 		echo json_encode(array(
-								"error" => false,
-								"msg" => "Thank you!"
+								"error" => ($resp->is_valid == true) ? false : true,
+								"msg" => ($resp->error === null) ? "Thank you!" : "Please Try again!"
 								));
 	}
 
@@ -173,5 +177,6 @@ Class Basfoiy
 
 require_once 'Db.php';
 require_once 'ViewHelper.php';
+require_once 'Lib/recaptchalib.php';
 
 error_reporting(0);
