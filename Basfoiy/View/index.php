@@ -5,7 +5,7 @@
     </form>
 </div>
 <div id="basresults">
-    <p class="baserror hide"> An error has occurred - <span class="dv">މައްސަލައެއް ދިމާވެއްޖެ</span></p>
+    <p class="notice error hide"> An error has occurred - <span class="dv">މައްސަލައެއް ދިމާވެއްޖެ</span></p>
     <div id="followingBallsG">
         <div id="followingBallsG_1" class="followingBallsG"></div>
         <div id="followingBallsG_2" class="followingBallsG"></div>
@@ -14,4 +14,14 @@
     </div>
     <ul>
     </ul>
+</div>
+
+<div id="bassuggest">
+    <form action="suggest">
+        <input type="text" name="baseng" placeholder="English Word">
+        <input type="text" name="basdhi" placeholder="Dhivehi Word">
+        <input type="text" name="baslatin" placeholder="Latin Word">
+        <div id="bassuggestrecaptcha"></div>
+        <button type="submit">Suggest</button>
+    </form>
 </div>

@@ -38,7 +38,7 @@ $("#baslang").click(
 	}
 );
 
-$("input").keyup(function(){
+$("#basterm").keyup(function(){
 	if ($(this).val() === '') {
 		$("#baslogo").removeClass("baslogosmall");
 		$("#bascontent").removeClass("bascontentsmall");
