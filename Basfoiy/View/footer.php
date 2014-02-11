@@ -3,7 +3,7 @@
             <div class="fb-like" data-href="https://www.facebook.com/basfoiymv" data-layout="button_count" data-action="recommend" data-show-faces="true" data-share="false"></div>
 	        <p id="basdev">
 	        	<a id="inm" href="http://www.google.com/+IbrahimNaeem" target="_blank">Ibrahim Naeem</a>
-	        	<a id="exz" href="https://plus.google.com/+AbdhullaShaheed/" target="_blank">Abdulla Shaheed</a>
+	        	<a id="exz" href="http://www.google.com/+AbdhullaShaheed/" target="_blank">Abdulla Shaheed</a>
 	        <p>
             <p id="copy">&copy; <?php echo date('Y'); ?> Basfoiy.mv</p>
         </footer>
