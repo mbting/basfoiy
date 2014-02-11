@@ -152,6 +152,10 @@ header,footer {
 	transition: all 0.8s;
 }
 
+.bascontext:after {
+	content: "\200E";
+}
+
 .baseng {
 	float: left;
 	padding-top: 13px;
