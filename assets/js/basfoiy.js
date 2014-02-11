@@ -111,6 +111,7 @@ $("#bassuggest form").submit(function() {
 		} else {
 			$("#bassuggest  .error").text(data.msg).fadeIn();
 		}
+		$("#bassuggest input").val('');
 	}).error(function(){
 		$("#bassuggest  .error").fadeIn();
 	});
