@@ -45,4 +45,26 @@ Class Db
 
 		return $result;
 	}
+
+	/*
+	 * Executes the passed query
+	 *
+	 * @q string query with the placeholders for params (:param1)
+	 * @params array optionl parameters for the passed query 
+	 */
+	public function insert($q, Array $params = array())
+	{
+		$stmt = $this->con->prepare($q);
+		try
+		{
+			$stmt->execute($params);
+		}
+		catch (PDOException $e)
+		{
+			echo $e->getMessage();
+			exit;
+		}
+
+		return true;
+	}
 }
