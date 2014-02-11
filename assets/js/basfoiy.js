@@ -91,7 +91,7 @@ function callWords() {
 	});
 }
 
-$("#basresults").on("click",".suggestprompt a",function() { $("#bassuggest").fadeIn(); return false;});
+$("#basresults").on("click",".suggestprompt a",function() { $("#bassuggest").fadeIn(); $("#bassuggest  .notice").fadeOut(); return false;});
 
 $("#suggestClose").click(function(){$("#bassuggest").fadeOut(); return false;});
 
