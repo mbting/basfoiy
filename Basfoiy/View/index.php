@@ -18,6 +18,9 @@
 
 <div id="bassuggest">
     <form action="suggest">
+        <a id="suggestClose" href="#">x</a>
+        <p class="notice error hide"> An error has occurred </p>
+        <p class="notice success hide"> Thank you </p>
         <input type="text" name="baseng" placeholder="English Word">
         <input type="text" name="basdhi" placeholder="Dhivehi Word">
         <input type="text" name="baslatin" placeholder="Latin Word">

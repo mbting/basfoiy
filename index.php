@@ -9,7 +9,14 @@ switch($basfoiy->urlParam(1))
 	case 'search' :
 		$basfoiy->searchAction();
 		break;
-	default :
+	case 'suggest' :
+		$basfoiy->suggestAction();
+		break;
+	case '':
 		$basfoiy->homeAction();
+		break;
+	default :
+		header('HTTP/1.0 404 Not Found');
+		echo "The requested page was not found.";
 		break;
 }

@@ -78,17 +78,49 @@ function callWords() {
 		} else {
 			$("#basresults ul")
 				.hide()
-				.html('<li class="basword clear"><div class="basbox baseng"><a href="#">Not found</a></div><div class="basbox basdv"><a href="#" class="dv">ނުފެނުނު</a></div></li>')
+				.html('<li class="basword suggestprompt clear"><a href="#" >Suggest?</a></li>')
+				// .html('<li class="basword clear"><div class="basbox baseng"><a href="#">Not found</a></div><div class="basbox basdv"><a href="#" class="dv">ނުފެނުނު</a></div></li>')
 				.fadeIn("slow",function(){});
 		}
 		$("#followingBallsG").hide();
 	}).error(function(){
 		if ($("#basterm").val() !== '') {
-			$("#basresults .baserror").fadeIn();
+			$("#basresults .error").fadeIn();
 		}
 		$("#followingBallsG").hide();
 	});
 }
+
+$("#basresults").on("click",".suggestprompt a",function() { $("#bassuggest").fadeIn(); return false;});
+
+$("#suggestClose").click(function(){$("#bassuggest").fadeOut(); return false;});
+
+$("#bassuggest form").submit(function() {
+	var ready = false;
+	$("#bassuggest input").each(function() {
+		if (ready === false) {
+			ready = $.trim($(this).val()).length > 0;
+		}
+	});
+	if (ready === false) { $("#bassuggest input").addClass("error"); return false; }
+
+	var suggestData = $("#bassuggest form").serialize();
+	$.post("suggest",suggestData,function(data){
+		if (data.error === false) {
+			$("#bassuggest  .success").text(data.msg).fadeIn();
+		} else {
+			$("#bassuggest  .error").text(data.msg).fadeIn();
+		}
+	}).error(function(){
+		$("#bassuggest  .error").fadeIn();
+	});
+	return false;
+});
+
+$("#bassuggest input").keydown(function(){
+	$("#bassuggest input").removeClass("error");
+	$("#bassuggest  .notice").fadeOut();
+});
 
 // delay actions
 var delay = (function(){

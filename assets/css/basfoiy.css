@@ -37,7 +37,7 @@ input.dv {
 
 .notice {
 	padding: 10px;
-	color: #fff;
+	color: #fff !important;
 	text-align: center;
 	width: 620px;
 	margin: 0 auto;
@@ -45,6 +45,10 @@ input.dv {
 
 .notice.error {
 	background: #9e3e3e;
+}
+
+input.error {
+	border: 1px solid #9e3e3e !important;
 }
 
 .notice.success {
@@ -210,6 +214,15 @@ header,footer {
 	margin-right: 5px;
 }
 
+.suggestprompt a {	
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+	text-decoration: none;
+	color: #7e7e7e;
+}
+
 #bassuggest {
 	width: 100%;
 	height: 100%;
@@ -228,16 +241,41 @@ header,footer {
 	background: #fff;
 	padding: 20px;
 	border: 1px solid #d6d6d6;
+	position: relative;
 }
 
 #bassuggest form * {
-	display: block;
 	width: 100%;
 	margin-bottom: 10px;
 	color: #7e7e7e;
 }
 
+#suggestClose {
+	width: 20px !important;
+	display: block;
+	height: 20px;
+	border: 1px solid #d6d6d6;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	color: #fff !important;
+	text-decoration: none;
+	padding: 1px 0px 0px 6px;
+	font-size: 0.8em;
+	background: #d6d6d6;
+	float: right;
+	margin-top: -31px;
+	margin-right: -8px;
+
+}
+
+#suggestClose:hover {
+	background: #fff;
+	color: #d6d6d6 !important;
+}
+
 #bassuggest input {
+	display: block;
 	height: 40px;
 	border: 1px solid #d6d6d6;
 	padding: 10px;
@@ -245,6 +283,7 @@ header,footer {
 }
 
 #bassuggest button {
+	display: block;
 	height: 40px;
 	background: #6b9e3e;
 	border: 1px solid #6b9e3e;
@@ -334,6 +373,10 @@ header,footer {
 	.bascontext {
 		display: block;
 		clear: both;
+	}
+
+	#bassuggest form {
+		width: 100%;
 	}
 
 }

@@ -118,6 +118,16 @@ Class Basfoiy
 
 	}
 
+	public function suggestAction() {
+		// respond as json
+		header('Content-Type: application/json');
+		// return
+		echo json_encode(array(
+								"error" => false,
+								"msg" => "Thank you!"
+								));
+	}
+
 	/*
 	 * return the parsed urlParams
 	 */
