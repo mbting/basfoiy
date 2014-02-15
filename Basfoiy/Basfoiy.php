@@ -127,6 +127,15 @@ Class Basfoiy
                                 $_POST["recaptcha_response_field"]);
 		if ($resp->is_valid == true)
 		{
+			if ($_POST['baseng'] == '' && $_POST['basdhi'] == '' && $_POST['baslatin'] == '')
+			{
+				echo json_encode(array(
+								"error" => true,
+								"msg" => "Please enter one of the words!"
+								));
+				exit;
+			}
+
 			$this->db->insert(
 				'insert into bassuggests (eng,dhi,latin) values (:eng,:dhi,:latin)',
 				array(
