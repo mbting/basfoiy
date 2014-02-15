@@ -276,6 +276,12 @@ header,footer {
 	color: #7e7e7e;
 }
 
+#basdhisuggest {
+	direction: rtl;
+	font-family: Mv Iyyu Formal;
+	line-height: -1em;
+}
+
 #recaptcha_table {
 	margin: 0 auto !important;
 }

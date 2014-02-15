@@ -8,6 +8,7 @@ var api = null;
 
 $(document).ready(function(){
     thaanaKeyboard.defaultKeyboard='phonetic';
+    thaanaKeyboard.setHandlerById("basdhisuggest","enable");
     $("#followingBallsG").hide();
     $("#basterm").focus();
 	//scroll to searchbox 

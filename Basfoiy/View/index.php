@@ -22,7 +22,7 @@
         <p class="notice error hide"> An error has occurred </p>
         <p class="notice success hide"> Thank you </p>
         <input type="text" name="baseng" placeholder="English Word">
-        <input type="text" name="basdhi" placeholder="Dhivehi Word">
+        <input type="text" id="basdhisuggest" name="basdhi" placeholder="ދިވެހި ބަސް">
         <input type="text" name="baslatin" placeholder="Latin Word">
         <div id="bassuggestrecaptcha"></div>
         <button type="submit">Suggest</button>
