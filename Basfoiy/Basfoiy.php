@@ -169,4 +169,4 @@ require_once 'ViewHelper.php';
 require_once 'UrlHelper.php';
 require_once 'Lib/recaptchalib.php';
 
-error_reporting(0);
+// error_reporting(0);

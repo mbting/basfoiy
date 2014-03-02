@@ -2,7 +2,7 @@
 
 require_once 'Basfoiy/Basfoiy.php';
 
-$basfoiy = new Basfoiy(require_once 'Basfoiy/config.php');
+$basfoiy = new Basfoiy(require 'Basfoiy/config.php');
 
 switch($basfoiy->url->segment(1))
 {
@@ -14,6 +14,23 @@ switch($basfoiy->url->segment(1))
 		break;
 	case '':
 		$basfoiy->homeAction();
+		break;
+	case 'crowd':
+		require_once 'Basfoiy/BasCrowd.php';
+		$crowd = new BasCrowd(require 'Basfoiy/config.php');
+		switch($crowd->url->segment(2))
+		{
+			case '':
+				$crowd->indexAction();
+				break;
+			case 'words':
+				$crowd->wordsAction();
+				break;
+			default :
+				header('HTTP/1.0 404 Not Found');
+				echo "The requested page was not found.";
+				break;
+		}
 		break;
 	default :
 		header('HTTP/1.0 404 Not Found');
