@@ -118,6 +118,11 @@ Class Basfoiy
 
 	}
 
+	public function notfoundAction()
+	{
+		$this->view->setLocation('404',false)->load();
+	}
+
 	public function suggestAction() {
 		// respond as json
 		header('Content-Type: application/json');

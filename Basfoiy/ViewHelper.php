@@ -6,6 +6,8 @@ Class ViewHelper
 
 	private $config;
 
+	private $loadTemplate;
+
 	public function __construct(Array $config)
 	{
 		if (isset($config['db']))
@@ -15,9 +17,10 @@ Class ViewHelper
 		$this->config = $config;
 	}
 
-	public function setLocation($location)
+	public function setLocation($location,$template = true)
 	{
 		$this->location = $location;
+		$this->loadTemplate = $template;
 		return $this;
 	}
 
@@ -27,8 +30,16 @@ Class ViewHelper
 		if (is_array($variables)) {
 			extract($variables);
 		}
-		include 'View/header.php';
-		include 'View/' . $this->location . '.php';
-		include 'View/footer.php';
+		if ($this->loadTemplate === false) 
+		{
+			include 'View/' . $this->location . '.php';
+		}
+		else 
+		{
+			include 'View/header.php';
+			include 'View/' . $this->location . '.php';
+			include 'View/footer.php';
+		}
 	}
+
 }

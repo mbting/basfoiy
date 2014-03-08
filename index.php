@@ -17,6 +17,7 @@ switch($basfoiy->urlParam(1))
 		break;
 	default :
 		header('HTTP/1.0 404 Not Found');
-		echo "The requested page was not found.";
+		$basfoiy->notfoundAction();
+		// echo "The requested page was not found.";
 		break;
 }

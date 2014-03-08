@@ -82,6 +82,13 @@ header,footer {
 	transition: all 0.8s;
 }
 
+#bas404 {
+	width: 500px;
+	display: block;
+	margin: 0 auto;
+	padding-top: 10%;
+}
+
 .baslogosmall {
 	height: 100px !important;
 	width: 100px !important;
@@ -404,6 +411,10 @@ input.error {
 		width: 100%;
 	}
 
+}
+
+@media only screen and (max-width: 500px) {
+	#bas404 { width: 100%; }
 }
 
 
