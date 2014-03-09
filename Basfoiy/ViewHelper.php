@@ -24,8 +24,8 @@ Class ViewHelper
 	public function setTemplate($template = false)
 	{
 		$this->template = ($template === false) ? false : $template;
-		$this->header = ($template === false) ? 'View/header.php' : 'View/' . $this->template . 'header.php';
-		$this->footer = ($template === false) ? 'View/footer.php' : 'View/' . $this->template . 'footer.php';
+		$this->header = ($template === false) ? 'View/header.php' : 'View/' . $this->template . '/header.php';
+		$this->footer = ($template === false) ? 'View/footer.php' : 'View/' . $this->template . '/footer.php';
 		return $this;
 	}
 
