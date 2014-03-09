@@ -20,6 +20,7 @@ Class BasCrowd
 		$this->url = new UrlHelper();
 		// set view helper
 		$this->view = new ViewHelper($this->config);
+		$this->view->setTemplate('crowd');
 
 		if (session_status() == PHP_SESSION_NONE) session_start();
 
@@ -27,7 +28,7 @@ Class BasCrowd
 
 	public function indexAction()
 	{
-		echo  "im alive";
+		$this->view->setLocation('index')->load();
 	}
 
 	public function wordsAction()
