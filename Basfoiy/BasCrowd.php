@@ -30,6 +30,31 @@ Class BasCrowd
 		echo  "im alive";
 	}
 
+	public function wordsAction()
+	{
+		$output = array('error' => true,'result' => 'An error has occured');
+		$total = $this->db->query('select count(1) count from basdata');
+		$total = $total[0]->count;
+		$limit = intval($this->config['crowdlimit']);
+		$pages = ceil($total / $limit);
+		$page = intval($this->url->segment(3));
+		$page = ($page == 0) ? 1 : $page;
+		$offset = ($page - 1)  * $limit;
+
+		$q = $this->db->prepare('select * from basdata limit :limit offset :offset');
+		$q->bindParam(':limit', $limit, PDO:: PARAM_INT);
+		$q->bindParam(':offset', $offset, PDO:: PARAM_INT);
+		$result = $this->db->fetch($q);
+
+		// respond as json
+		header('Content-Type: application/json');
+		if ($result !== false) 
+		{
+			$output['error'] = false;
+			$output['result'] = $result;
+		}
+		echo json_encode($output);
+	}
 
 }
 
