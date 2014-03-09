@@ -9,35 +9,19 @@
 				<th class="dv column third">ދިވެހި</th>
 				<th class="column third">Latin</th>
 			</tr>
-			<tr class="row">
-				<td class="column third">lorem</td>
-				<td class="dv column third">އިޕްސަމް</td>
-				<td class="column third">dolor</td>
-			</tr>
-			<tr class="row">
-				<td class="column third">lorem</td>
-				<td class="dv column third">އިޕްސަމް</td>
-				<td class="column third">dolor</td>
-			</tr>
-			<tr class="row">
-				<td class="column third">lorem</td>
-				<td class="dv column third">އިޕްސަމް</td>
-				<td class="column third">dolor</td>
-			</tr>
-			<tr class="row">
-				<td class="column third">lorem</td>
-				<td class="dv column third">އިޕްސަމް</td>
-				<td class="column third">dolor</td>
-			</tr>
 		</table>
-		<nav class="row">
+		<nav class="column full">
 			<ul class="column full">
-				<li><a id="firstpage" data-page="1" href="#"><i class="fa fa-angle-double-left"></i></a></li>
-				<li><a id="previouspage" data-page="1" href="#"><i class="fa fa-angle-left"></i></a></li>
+				<li><a class="tablenav" id="previouspage" data-page="" href="#"><i class="fa fa-angle-left"></i></a></li>
 				<li><a id="pageno" href="#">1</a></li>
-				<li><a id="nextpage" data-page="2" href="#"><i class="fa fa-angle-right"></i></a></li>
-				<li><a id="lastpage" data-page="1562" href="#"><i class="fa fa-angle-double-right"></i></a></li>
+				<li><a class="tablenav" id="nextpage" data-page="" href="#"><i class="fa fa-angle-right"></i></a></li>
 			</ul>
+			<div id="followingBallsG" class="column full">
+				<div id="followingBallsG_1" class="followingBallsG"></div>
+				<div id="followingBallsG_2" class="followingBallsG"></div>
+				<div id="followingBallsG_3" class="followingBallsG"></div>
+				<div id="followingBallsG_4" class="followingBallsG"></div>
+			</div>
 		</nav>
 	</div>
 </div>

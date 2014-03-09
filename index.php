@@ -24,7 +24,7 @@ switch($basfoiy->url->segment(1))
 				$crowd->indexAction();
 				break;
 			case 'words':
-				$crowd->wordsAction();
+				$crowd->wordsAction();//sleep(2);
 				break;
 			default :
 				header('HTTP/1.0 404 Not Found');

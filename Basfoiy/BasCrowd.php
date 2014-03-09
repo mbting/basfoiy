@@ -53,6 +53,7 @@ Class BasCrowd
 		{
 			$output['error'] = false;
 			$output['result'] = $result;
+			$output['lastpage'] = $total;
 		}
 		echo json_encode($output);
 	}
