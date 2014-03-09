@@ -1,0 +1,142 @@
+/**
+ *
+ * @author Ibrahim Naeem <mbting.9m@gmail.com>
+ *
+**/
+
+::-webkit-scrollbar { display: none;}
+input:focus { outline: none; }
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	font: 15px Tahoma, Helvetica, Arial, sans-serif;
+	background : url(../img/pat.png);
+	color: #7e7e7e;
+}
+
+.row:before,
+.row:after,
+.clear:before,
+.clear:after {
+	content: " ";
+	display: table;
+}
+
+.clear:after,.row:after {
+	clear: both;
+}
+
+a {
+	text-decoration: none;
+	color: #a6a6a6;
+}
+
+th { text-align: left; }
+
+.dv {
+	font-family: Mv Iyyu Formal;
+	direction: rtl;
+	text-align: right;
+	font-size: 1.05em;
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.row {
+	width: 100%;
+	display: block;
+}
+
+.column {
+	float: left;
+	margin: 0;
+	padding: 0.5em;
+}
+
+.column.full { width: 100%; }
+.column.two-thirds { width: 66.7%; }
+.column.half { width: 50%; }
+.column.third { width: 33.3%; }
+.column.fourth { width: 24.95%; }
+
+header {
+	width: 100%;
+	padding: 20px;
+}
+
+header img {
+	width: 100px;
+	height: 100px;
+	display: block;
+	margin: 0 auto;
+}
+
+#wordsearchterm {
+	border: none;
+	color: #7e7e7e;
+	font-style: italic;
+	text-align: center;
+	width: 100%;
+}
+
+.words tr:first-child { border : 1px solid #6b9e3e; }
+
+.words tr:nth-child(2) {
+	background: #6b9e3e !important;
+	color: #fff;
+}
+
+.words tr {
+	background: #fff;
+	border : 1px solid #6b9e3e;
+	border-top: none;
+	border-bottom: none;
+	position: relative;
+}
+
+.words tr:nth-child(even) {
+	background: #f0f0f0;
+}
+
+.words tr:last-child {
+	border-bottom : 1px solid #6b9e3e;
+}
+
+#wordstable nav {
+	text-align: center;
+}
+
+#wordstable nav ul {
+	list-style: none;
+}
+
+#wordstable nav li {
+	display: inline-block;
+}
+
+#wordstable nav a {
+	display: block;
+	background: #6b9e3e;
+	color: #fff;
+	padding: 4px 8px 4px 8px;
+	font-size: 0.8em;
+}
+
+#wordstable nav a:hover {
+	background: #7e7e7e;
+	color: #fff;
+}

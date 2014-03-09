@@ -8,7 +8,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="assets/css/bascrowd.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
         <link rel="author" href="humans.txt">
         <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
     </head>
     <body>
+        <div class="container clear">
+            <header>
+                <img id="baslogo" src="assets/img/baslogo.png" alt="Basfoiy" class="" />
+            </header>
