@@ -49,7 +49,14 @@ Class Db
 	{
 		try
 		{
-			$stmt->execute($params);
+			if (empty($params))
+			{
+				$stmt->execute();
+			}
+			else
+			{
+				$stmt->execute($params);
+			}
 			$result = $stmt->fetchAll(PDO::FETCH_OBJ);
 		}
 		catch (PDOException $e)
