@@ -29,7 +29,24 @@ Class Db
 	 */
 	public function query($q, Array $params = array())
 	{
+		$stmt = $this->prepare($q);
+		return $this->fetch($stmt,$params);
+	}
+
+	/*
+	 * @return prepared pdo statement object
+	 */
+	public function prepare($q)
+	{
 		$stmt = $this->con->prepare($q);
+		return $stmt;
+	}
+
+	/*
+	 * fetch the result as an object
+	 */
+	public function fetch($stmt,$params =  array())
+	{
 		try
 		{
 			$stmt->execute($params);
