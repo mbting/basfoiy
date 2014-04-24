@@ -11,6 +11,8 @@ Class ViewHelper
 	private $template;
 	private $loadTemplate;
 
+	private $url;
+
 	public function __construct(Array $config)
 	{
 		if (isset($config['db']))
@@ -19,6 +21,8 @@ Class ViewHelper
 		}
 		$this->config = $config;
 		$this->setTemplate();
+
+		$this->url = new UrlHelper();
 	}
 
 	public function setTemplate($template = false)
@@ -39,6 +43,7 @@ Class ViewHelper
 	public function load($variables = null)
 	{
 
+		$rootUrl = $this->url->getRootUrl();
 		if (is_array($variables)) {
 			extract($variables);
 		}

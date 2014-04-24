@@ -17,9 +17,9 @@
         }(document, 'script', 'facebook-jssdk'));</script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
-        <script src="assets/js/jtk-4.2.1.pack.js"></script>
+        <script src="<?php echo $rootUrl; ?>assets/js/jtk-4.2.1.pack.js"></script>
         <script type="text/javascript">var recaptchaKey = "<?php echo $this->config["apiKeys"]["recaptcha"]["public"]; ?>";</script>
-        <script src="assets/js/basfoiy.js"></script>
+        <script src="<?php echo $rootUrl; ?>assets/js/basfoiy.js"></script>
         <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

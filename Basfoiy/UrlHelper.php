@@ -3,10 +3,11 @@
 class UrlHelper
 {
 	private $params;
+	private $rootUrl;
 
 	public function __construct()
 	{
-		// identify sub directory
+		$this->rootUrl = 'http://' . $_SERVER['HTTP_HOST'] . str_replace('index.php', '', $_SERVER['PHP_SELF']);
 		$subdir = explode('index.php',$_SERVER['PHP_SELF']);
 		$subdir = isset($subdir[0]) ? $subdir[0] : '';
 		$subdir = ($subdir == '/') ? '' : $subdir;
@@ -27,5 +28,10 @@ class UrlHelper
 		if (isset($this->params[$index - 1]))
 			return $this->params[$index - 1];
 		return '';
+	}
+
+	public function getRootUrl()
+	{
+		return $this->rootUrl;
 	}
 }
