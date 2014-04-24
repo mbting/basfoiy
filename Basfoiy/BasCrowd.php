@@ -58,6 +58,33 @@ Class BasCrowd
 		echo json_encode($output);
 	}
 
+	public function suggestAction()
+	{
+		$output = array('error' => true,'result' => 'An error has occured');
+		$total = $this->db->query('select count(1) count from bassuggests');
+		$total = $total[0]->count;
+		$limit = intval($this->config['crowdlimit']);
+		$pages = ceil($total / $limit);
+		$page = intval($this->url->segment(3));
+		$page = ($page == 0) ? 1 : $page;
+		$offset = ($page - 1)  * $limit;
+
+		$q = $this->db->prepare('select * from bassuggests limit :limit offset :offset');
+		$q->bindParam(':limit', $limit, PDO:: PARAM_INT);
+		$q->bindParam(':offset', $offset, PDO:: PARAM_INT);
+		$result = $this->db->fetch($q);
+
+		// respond as json
+		header('Content-Type: application/json');
+		if ($result !== false) 
+		{
+			$output['error'] = false;
+			$output['result'] = $result;
+			$output['lastpage'] = $total;
+		}
+		echo json_encode($output);
+	}
+
 }
 
 require_once 'Db.php';
