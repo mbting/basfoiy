@@ -23,11 +23,17 @@ switch($basfoiy->url->segment(1))
 			case '':
 				$crowd->indexAction();
 				break;
+			case 'browse':
+				$crowd->browseAction();
+				break;
 			case 'words':
 				$crowd->wordsAction();
 				break;
 			case 'suggest':
 				$crowd->suggestAction();
+				break;
+			case 'search' :
+				$basfoiy->searchAction();
 				break;
 			default :
 				header('HTTP/1.0 404 Not Found');

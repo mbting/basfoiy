@@ -34,7 +34,7 @@ function words(page)
 	$('#wordsearchterm').val();
 	$("#followingBallsG").show();
 	page = typeof page !== 'undefined' ? page : 1;
-	api = $.get('crowd/words/'+page,function(data){
+	api = $.get('words/'+page,function(data){
 		// console.log(data);
 		if (data.error === false) {
 			$('.wordrow').remove();

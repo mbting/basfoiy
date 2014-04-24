@@ -31,6 +31,11 @@ Class BasCrowd
 		$this->view->setLocation('index')->load();
 	}
 
+	public function browseAction()
+	{
+		$this->view->setLocation('browse')->load();
+	}
+
 	public function wordsAction()
 	{
 		$output = array('error' => true,'result' => 'An error has occured');
