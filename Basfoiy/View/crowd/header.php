@@ -12,6 +12,7 @@
         <link rel="author" href="<?php echo $rootUrl; ?>humans.txt">
         <link rel="apple-touch-icon" href="<?php echo $rootUrl; ?>assets/img/apple-touch-icon.png" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="<?php echo $rootUrl; ?>assets/js/jtk-4.2.1.pack.js"></script>
     </head>
     <body>
         <div class="container clear">

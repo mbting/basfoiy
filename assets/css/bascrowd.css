@@ -111,7 +111,7 @@ header img {
 
 .words tr:first-child { border : 1px solid #6b9e3e; }
 
-.words tr:nth-child(2) {
+.words tr:nth-child(1) {
 	background: #6b9e3e !important;
 	color: #fff;
 }
@@ -130,6 +130,23 @@ header img {
 
 .words tr:last-child {
 	border-bottom : 1px solid #6b9e3e;
+}
+
+.words td { min-height: 33px; }
+
+.basinput input { 
+	min-height: 25px; 
+	padding-left: 5px;
+	padding-right: 5px;
+	border: 1px solid #7e7e7e;
+	color: #7e7e7e;
+	width: 100%;
+}
+
+#basdhisuggest {
+	direction: rtl;
+	font-family: Mv Iyyu Formal;
+	line-height: -1em;
 }
 
 #wordstable nav {
@@ -155,6 +172,20 @@ header img {
 #wordstable nav a:hover {
 	background: #7e7e7e;
 	color: #fff;
+}
+
+#wordstable .bascrowdaction, #wordstable .bascrowdaction a  {
+	text-align: center;
+}
+
+#wordstable .bascrowdaction a {
+	color: #6b9e3e;
+	padding: 0px 10px 0px 10px;
+	font-size: 1.2em;
+}
+
+#wordstable .bascrowdaction .wordrej {
+	color: #9e3e3e;
 }
 
 #followingBallsG {

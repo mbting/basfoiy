@@ -1,14 +1,14 @@
 <div id="wordstable" class="row clear">
 	<div class="column full">
 		<table class="words column full">
-			<tr class="row">
+			<!-- <tr class="row">
 				<th colspan="3" class="column full"><input id="wordsearchterm" type="text" name="searchterm" placeholder="Enter a word to search" /></th>
-			</tr>
+			</tr> -->
 			<tr class="row">
 				<th class="column fifth">English</th>
 				<th class="dv column third">ދިވެހި</th>
 				<th class="column third">Latin</th>
-				<th class="column tenth">Action</th>
+				<th class="column tenth bascrowdaction"></th>
 			</tr>
 		</table>
 		<nav class="column full">
@@ -26,6 +26,5 @@
 		</nav>
 	</div>
 </div>
-
 
 <script src="<?php echo $rootUrl; ?>assets/js/bassuggest.js"></script>

@@ -10,20 +10,22 @@ var maxpages = 0;
 
 $(document).ready(function(){
 	words();
+	thaanaKeyboard.defaultKeyboard='phonetic';
+	thaanaKeyboard.setHandlerByClass("basedit","enable");
 	// todo
 	// History.Adapter.bind(window,'statechange',function(){ 
 	// 	var State = History.getState(); 
 	// });
 });
 
-$('#wordsearchterm').keyup(function(){
-	if ($(this).val().length > 2) {
-		delay(function(){search();}, 500 );
-	} else {
-		words($('#pageno').text());
-		$("#followingBallsG").hide();
-	}
-});
+// $('#wordsearchterm').keyup(function(){
+// 	if ($(this).val().length > 2) {
+// 		delay(function(){search();}, 500 );
+// 	} else {
+// 		words($('#pageno').text());
+// 		$("#followingBallsG").hide();
+// 	}
+// });
 
 $('#wordstable nav a').click(function(){ return false; });
 
@@ -31,6 +33,21 @@ $('.tablenav').click(function(){
 	if ($(this).data('page') <= maxpages) {
 		words($(this).data('page'));
 	}
+});
+
+$('#wordstable').on('click','.basinput',function(){
+	var wordvalue;
+	if ($(this).find('span').length) {
+		wordvalue = $(this).find('span').text();
+		$(this).html('<input class="basedit" type="text" value="'+wordvalue+'">');
+
+		$(this).find('input').focus();
+	}
+});
+
+$('#wordstable').on('blur','.basinput input',function(){
+	var wordvalue = $(this).val();
+	$(this).parent().html('<span>'+ wordvalue +'</span>');
 });
 
 function words(page)
@@ -45,11 +62,12 @@ function words(page)
 				$("#wordstable table")
 					// .append('<tr class="row wordrow"><td class="column third">'+row.eng+'</td><td class="dv column third">'+row.dhi+'</td><td class="column third">'+row.latin+'</td></tr>');
 					.append('<tr class="row wordrow">'
-						+ '<td class="column fifth">'+row.eng+'</td>'
-						+ '<td class="dv column third">'+row.dhi+'</td>'
-						+ '<td class="column third">'+row.latin+'</td>'
-						+ '<td class="column tenth">'
-							+ '<a href="#" data-id="'+row.id+'">Approve</a>'
+						+ '<td class="basinput column fifth"><span>'+row.eng+'</span></td>'
+						+ '<td class="basinput dv column third"><span>'+row.dhi+'</span></td>'
+						+ '<td class="basinput column third"><span>'+row.latin+'</span></td>'
+						+ '<td class="column tenth bascrowdaction">'
+							+ '<a href="#" class="wordacc" data-id="'+row.id+'"><i class="fa fa-check"></i></a>'
+							+ '<a href="#" class="wordrej" data-id="'+row.id+'"><i class="fa fa-times"></i></a>'
 						+ '</td>'
 					+ '</tr>');
 			});
@@ -60,7 +78,6 @@ function words(page)
 			$('#nextpage').data('page',page+1);
 			$('#previouspage').data('page',(page-1) < 1 ? 1 : page-1);
 			maxpages = data.lastpage;
-			console.log(maxpages);
 		}
 	}).error(function(){
 		console.log('error');
