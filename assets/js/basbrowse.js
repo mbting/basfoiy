@@ -5,6 +5,7 @@
 **/
 
 var api = null;
+var maxpages = 0;
 
 $(document).ready(function(){
 	words();
@@ -26,7 +27,9 @@ $('#wordsearchterm').keyup(function(){
 $('#wordstable nav a').click(function(){ return false; });
 
 $('.tablenav').click(function(){
-	words($(this).data('page'));
+	if ($(this).data('page') <= maxpages) {
+		words($(this).data('page'));
+	}
 });
 
 function words(page)
@@ -34,7 +37,7 @@ function words(page)
 	$('#wordsearchterm').val();
 	$("#followingBallsG").show();
 	page = typeof page !== 'undefined' ? page : 1;
-	api = $.get('words/'+page,function(data){
+	api = $.get('/crowd/words/'+page,function(data){
 		// console.log(data);
 		if (data.error === false) {
 			$('.wordrow').remove();
@@ -48,6 +51,7 @@ function words(page)
 			$('#pageno').html(page);
 			$('#nextpage').data('page',page+1);
 			$('#previouspage').data('page',(page-1) < 1 ? 1 : page-1);
+			maxpages = data.lastpage;
 		}
 	}).error(function(){
 		console.log('error');

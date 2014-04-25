@@ -27,4 +27,4 @@
 </div>
 
 
-<script src="<?php echo $rootUrl; ?>assets/js/bascrowd.js"></script>
+<script src="<?php echo $rootUrl; ?>assets/js/basbrowse.js"></script>

@@ -82,6 +82,12 @@ th { text-align: left; }
 .column.half { width: 50%; }
 .column.third { width: 33.3%; }
 .column.fourth { width: 24.95%; }
+.column.fifth { width: 20%; }
+.column.sixth { width: 16.67%; }
+.column.seventh { width: 14.28%; }
+.column.eighth { width: 12.5%; }
+.column.ninth { width: 11.1%; }
+.column.tenth { width: 10%; }
 
 header {
 	width: 100%;
@@ -155,6 +161,10 @@ header img {
 	margin-top : -45px;
 }
 
+
+@media only screen and (max-width: 960px) {
+	.container { width: 100%; }
+}
 
 
 
