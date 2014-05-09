@@ -25,3 +25,12 @@ create table `bassuggests` (
   `status` int(2) not null default 0,
   primary key (`id`)
 ) charset=utf8 collate=utf8_unicode_ci;
+
+create table `bassuggestapp` (
+  `id` int(11) not null auto_increment,
+  `eng` varchar(255) collate utf8_unicode_ci not null,
+  `dhi` varchar(255) collate utf8_unicode_ci not null,
+  `latin` varchar(255) collate utf8_unicode_ci not null,
+  `status` int(2) not null default 0,
+  primary key (`id`)
+) charset=utf8 collate=utf8_unicode_ci;
