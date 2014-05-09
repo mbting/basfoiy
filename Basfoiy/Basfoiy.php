@@ -126,11 +126,28 @@ Class Basfoiy
 	public function suggestAction() {
 		// respond as json
 		header('Content-Type: application/json');
-		$resp = recaptcha_check_answer ($this->config["apiKeys"]["recaptcha"]["private"],
-                                $_SERVER["REMOTE_ADDR"],
-                                $_POST["recaptcha_challenge_field"],
-                                $_POST["recaptcha_response_field"]);
-		if ($resp->is_valid == true)
+
+		$proceed = false;
+		$table = 'bassuggests';
+		$key = isset($_POST['src']) ? $_POST['src'] : '';
+
+		if ($key == $this->config["appKey"]) 
+		{
+			$proceed = true;
+			$table = 'bassuggestapp';
+		} 
+		else
+		{
+			$resp = recaptcha_check_answer ($this->config["apiKeys"]["recaptcha"]["private"],
+	                                $_SERVER["REMOTE_ADDR"],
+	                                $_POST["recaptcha_challenge_field"],
+	                                $_POST["recaptcha_response_field"]);
+
+			$proceed = $resp->is_valid;
+			
+		}
+
+		if ($proceed)
 		{
 			if ($_POST['baseng'] == '' && $_POST['basdhi'] == '' && $_POST['baslatin'] == '')
 			{
@@ -142,7 +159,7 @@ Class Basfoiy
 			}
 
 			$this->db->insert(
-				'insert into bassuggests (eng,dhi,latin) values (:eng,:dhi,:latin)',
+				'insert into ' . $table . ' (eng,dhi,latin) values (:eng,:dhi,:latin)',
 				array(
 					'eng' => $_POST['baseng'],
 					'dhi' => $_POST['basdhi'],
@@ -152,8 +169,8 @@ Class Basfoiy
 		}
 		// return
 		echo json_encode(array(
-								"error" => ($resp->is_valid == true) ? false : true,
-								"msg" => ($resp->error === null) ? "Thank you!" : "Please Try again!"
+								"error" => ($proceed) ? false : true,
+								"msg" => ($proceed) ? "Thank you!" : "Please Try again!"
 								));
 	}
 

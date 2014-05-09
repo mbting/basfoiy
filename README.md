@@ -11,6 +11,7 @@ config file :
 	            'token' => 'thetoken',
 	            'limit' => '5',
 	            'findSimilar' => false,
+	            'appKey' => 'theappkey',
 	            'db' => array(
 	                    'host' => '127.0.0.1',
 	                    'db' => 'basfoi',
