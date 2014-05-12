@@ -1,7 +1,13 @@
         <footer>
 	        <p id="basquote" class="dv"><?php echo $text; ?></p>
+
             <div class="fb-like" data-href="https://www.facebook.com/basfoiymv" data-layout="button_count" data-action="recommend" data-show-faces="true" data-share="false"></div>
-	        <p id="basdev">
+
+            <a class="playstorbadge" href="https://play.google.com/store/apps/details?id=com.inm.basfoiy">
+                <img alt="Android app on Google Play"src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
+            </a>
+
+            <p id="basdev">
 	        	<a id="inm" href="http://www.google.com/+IbrahimNaeem" target="_blank">Ibrahim Naeem</a>
 	        	<a id="exz" href="http://www.google.com/+AbdhullaShaheed/" target="_blank">Abdulla Shaheed</a>
 	        <p>
