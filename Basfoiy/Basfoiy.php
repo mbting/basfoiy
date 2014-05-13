@@ -113,7 +113,29 @@ Class Basfoiy
 		{
 			$output['error'] = false;
 			$output['result'] = $result;
+
+			foreach ($result as $bas) {
+				$this->db->insert(
+					'insert into bastracking (basid) values (:id)',
+					array(
+						'id' => $bas->id
+						)
+					);
+			}
+
 		} 
+		else
+		{
+			if (strlen($keyword) > 2) {
+				$this->db->insert(
+					'insert into baskeywords (keyword) values (:word)',
+					array(
+						'word' => $keyword
+						)
+					);
+			}
+		}
+
 		echo json_encode($output);
 
 	}
