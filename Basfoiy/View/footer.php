@@ -9,7 +9,7 @@
 
             <p id="basdev">
 	        	<a id="inm" href="http://www.google.com/+IbrahimNaeem" target="_blank">Ibrahim Naeem</a>
-	        	<a id="exz" href="http://www.google.com/+AbdhullaShaheed/" target="_blank">Abdulla Shaheed</a>
+	        	<a id="exz" href="http://www.google.com/+AbdullaShaheed" target="_blank">Abdulla Shaheed</a>
 	        <p>
 
             <div class="basvindhu"></div>
