@@ -66,7 +66,7 @@ Class BasCrowd
 	public function suggestAction()
 	{
 		$output = array('error' => true,'result' => 'An error has occured');
-		$total = $this->db->query('select count(1) count from bassuggests');
+		$total = $this->db->query('select count(1) count from bassuggests where status = 0');
 		$total = $total[0]->count;
 		$limit = intval($this->config['crowdlimit']);
 		$pages = ceil($total / $limit);

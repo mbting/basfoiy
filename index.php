@@ -12,6 +12,9 @@ switch($basfoiy->url->segment(1))
 	case 'suggest' :
 		$basfoiy->suggestAction();
 		break;
+	case 'stats' :
+		$basfoiy->statsAction();
+		break;
 	case '':
 		$basfoiy->homeAction();
 		break;
