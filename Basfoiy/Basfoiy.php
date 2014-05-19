@@ -196,6 +196,41 @@ Class Basfoiy
 								));
 	}
 
+	public function statsAction() {
+		if (isset($_GET['json']))
+		{
+			header('Content-Type: application/json');
+
+			$minutes = 60;
+
+			$data = $this->db->query("
+									SELECT TIME_FORMAT( TIME,  '%H:%i' )  `time` , COUNT( 1 )  `words` 
+									FROM  `bastracking` 
+									GROUP BY HOUR( TIME ) , MINUTE( TIME ) 
+									ORDER BY id DESC 
+									LIMIT 20
+								");
+
+			$dataset = array();
+
+			for ($i=0; $i < $minutes; $i++) { 
+				$time = date("H:i",strtotime("-" . $i . " minutes"));
+				$words = 0;
+				foreach ($data as $reqtime) {
+					if ($reqtime->time == $time) {
+						$words = $reqtime->words;
+						break;
+					}
+				}
+				$point = array('time' => $time,'words' => $words);
+				array_push($dataset, $point);
+			}
+
+			echo json_encode($dataset);
+			exit();
+		}
+	}
+
 	/*
 	 * check csrf token
 	 */
@@ -213,4 +248,4 @@ require_once 'ViewHelper.php';
 require_once 'UrlHelper.php';
 require_once 'Lib/recaptchalib.php';
 
-// error_reporting(0);
+error_reporting(0);

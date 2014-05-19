@@ -54,7 +54,7 @@ function words(page)
 {
 	$("#followingBallsG").show();
 	page = typeof page !== 'undefined' ? page : 1;
-	api = $.get('/crowd/suggest/'+page,function(data){
+	api = $.get('crowd/suggest/'+page,function(data){
 		// console.log(data);
 		if (data.error === false) {
 			$('.wordrow').remove();

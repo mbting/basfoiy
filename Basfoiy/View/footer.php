@@ -11,6 +11,9 @@
 	        	<a id="inm" href="http://www.google.com/+IbrahimNaeem" target="_blank">Ibrahim Naeem</a>
 	        	<a id="exz" href="http://www.google.com/+AbdhullaShaheed/" target="_blank">Abdulla Shaheed</a>
 	        <p>
+
+            <div class="basvindhu"></div>
+
             <p id="copy">&copy; <?php echo date('Y'); ?> Basfoiy.mv</p>
         </footer>
         <div id="fb-root"></div>
@@ -24,8 +27,10 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
         <script src="<?php echo $rootUrl; ?>assets/js/jtk-4.2.1.pack.js"></script>
-        <script type="text/javascript">var recaptchaKey = "<?php echo $this->config["apiKeys"]["recaptcha"]["public"]; ?>";</script>
+        <script type="text/javascript">var recaptchaKey = "<?php echo $this->config["apiKeys"]["recaptcha"]["public"]; ?>";</script>     
+        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
         <script src="<?php echo $rootUrl; ?>assets/js/basfoiy.js"></script>
+        <script src="<?php echo $rootUrl; ?>assets/js/basvindhu.js"></script>
         <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
