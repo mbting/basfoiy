@@ -370,6 +370,11 @@ header,footer {
 	clear: both;
 }
 
+.cclicence {
+	display: block;
+	clear: both;
+}
+
 #inm {
 	background: url('../img/inm.png') 0px -30px;
 }

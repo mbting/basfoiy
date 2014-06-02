@@ -14,6 +14,10 @@
 
             <div class="basvindhu"></div>
 
+			<a class="cclicence" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                <img alt="Creative Commons Attribution-NonCommercial 4.0 Licence"src="http://i.creativecommons.org/l/by-nc/4.0/80x15.png" />
+            </a>
+			
             <p id="copy">&copy; <?php echo date('Y'); ?> Basfoiy.mv</p>
         </footer>
         <div id="fb-root"></div>
