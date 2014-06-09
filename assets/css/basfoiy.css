@@ -336,15 +336,14 @@ header,footer {
 }
 
 #basquote {
-	width: 620px;
-	margin: 0 auto;
-	margin-bottom: 15px;
-	color: #7e7e7e;
-	font-size: 1.5em;
-	min-height: 42px;
-	background: url('../img/quote.png') no-repeat center;
-	padding : 20px;
-	line-height: 1.5em;
+    width: 620px;
+    color: #7E7E7E;
+    font-size: 1.5em;
+    background: url('../img/quote.png') no-repeat scroll center center transparent;
+    margin: 1px auto 5px;
+    padding: 20px;
+    line-height: 0;
+    height: 42px;
 }
 
 #basdev {
@@ -362,7 +361,7 @@ header,footer {
 
 .fb-like {
 	padding: 10px;
-	margin-top: 15px;
+	margin-top: 10px;
 }
 
 .playstorbadge {

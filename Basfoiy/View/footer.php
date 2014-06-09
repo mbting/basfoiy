@@ -10,7 +10,7 @@
             <p id="basdev">
 	        	<a id="inm" href="http://www.google.com/+IbrahimNaeem" target="_blank">Ibrahim Naeem</a>
 	        	<a id="exz" href="http://www.google.com/+AbdullaShaheed" target="_blank">Abdulla Shaheed</a>
-	        <p>
+	        </p>
 
             <div class="basvindhu"></div>
 
@@ -18,7 +18,6 @@
                 <img alt="Creative Commons Attribution-NonCommercial 4.0 Licence"src="http://i.creativecommons.org/l/by-nc/4.0/80x15.png" />
             </a>
 			
-            <p id="copy">&copy; <?php echo date('Y'); ?> Basfoiy.mv</p>
         </footer>
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
