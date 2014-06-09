@@ -2,6 +2,7 @@
     <form action="search" id="basform">
         <a href="#" id="baslang">EN</a>
         <div id="bastext"><input type="text" name="basterm" id="basterm" data-token="<?php echo $token; ?>" placeholder="Enter a word" /></div>
+        <button type="submit" class="searchbtn"><i class="fa fa-search"></i></button>
     </form>
 </div>
 <div id="basresults">

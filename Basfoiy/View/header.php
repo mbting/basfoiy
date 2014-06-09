@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo $rootUrl; ?>favicon.ico">
         <link rel="stylesheet" href="<?php echo $rootUrl; ?>assets/css/basfoiy.css">
+        <link rel="stylesheet" href="<?php echo $rootUrl; ?>assets/css/font-awesome.min.css">
         <link rel="author" href="<?php echo $rootUrl; ?>humans.txt">
         <link rel="apple-touch-icon" href="<?php echo $rootUrl; ?>assets/img/apple-touch-icon.png" />
     </head>

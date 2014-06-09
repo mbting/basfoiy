@@ -6,7 +6,7 @@
 
 ::-webkit-scrollbar {display: none;}
 *{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
-input:focus {outline: none; }
+input:focus,button:focus {outline: none; }
 
 body {
 	margin: 0;
@@ -125,6 +125,7 @@ header,footer {
 
 #basform {
 	width: 100%;
+	position: relative;
 }
 
 #basform * {
@@ -146,6 +147,21 @@ header,footer {
 	padding: 10px;
 	font-size: 1.3em;
 	border: 1px solid #fff;
+}
+
+.searchbtn i {
+	color: #bdbdbd !important;
+}
+
+.searchbtn {
+	border: none;
+	background: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60px;
+	padding: 20px;
+	font-size: 1.2em;
 }
 
 #bastext {

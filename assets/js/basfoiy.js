@@ -40,7 +40,16 @@ $("#baslang").click(
 );
 
 $("#basterm").keyup(function(){
-	if ($(this).val() === '') {
+	searchInterations();
+});
+
+$("#basform").submit(function(){
+	searchInterations();
+	return false;
+});
+
+function searchInterations() {
+	if ($("#basterm").val() === '') {
 		$("#baslogo").removeClass("baslogosmall");
 		$("#bascontent").removeClass("bascontentsmall");
 		$("#basresults ul").fadeOut("slow",function(){
@@ -57,11 +66,7 @@ $("#basterm").keyup(function(){
 			delay(function(){callWords();}, 500 );
 		} 	
 	}
-});
-
-$("#basform").submit(function(){
-	return false;
-});
+}
 
 // ajax call
 function callWords() {
