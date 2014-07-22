@@ -18,32 +18,6 @@ switch($basfoiy->url->segment(1))
 	case '':
 		$basfoiy->homeAction();
 		break;
-	case 'crowd':
-		require_once 'Basfoiy/BasCrowd.php';
-		$crowd = new BasCrowd(require 'Basfoiy/config.php');
-		switch($crowd->url->segment(2))
-		{
-			case '':
-				$crowd->indexAction();
-				break;
-			case 'browse':
-				$crowd->browseAction();
-				break;
-			case 'words':
-				$crowd->wordsAction();
-				break;
-			case 'suggest':
-				$crowd->suggestAction();
-				break;
-			case 'search' :
-				$basfoiy->searchAction();
-				break;
-			default :
-				header('HTTP/1.0 404 Not Found');
-				$basfoiy->notfoundAction();
-				break;
-		}
-		break;
 	default :
 		header('HTTP/1.0 404 Not Found');
 		$basfoiy->notfoundAction();
